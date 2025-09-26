@@ -31,14 +31,15 @@ const director1: Director = {
 };
 console.log(director1);
 
-// Interface describing the function signature
-interface PrintTeacherFunction {
+//Define the function interface (all lowercase as required)
+
+interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-const printTeacher: PrintTeacherFunction = (firstName, lastName) => {
-  return `${firstName.charAt(0)}. ${lastName}`;
-};
-
-console.log(printTeacher("John", "Doe")); // Output: J. Doe
+// Function declaration (not arrow function)
+// Using destructuring in the parameters
+function printTeacher({ firstName, lastName }: { firstName: string; lastName: string }): string {
+  return `${firstName}. ${lastName}`;
+}
 
