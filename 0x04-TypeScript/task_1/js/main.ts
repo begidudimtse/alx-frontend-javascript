@@ -43,6 +43,7 @@ function printTeacher({ firstName, lastName }: { firstName: string; lastName: st
   return `${firstName}. ${lastName}`;
 }
 
+
 // Interface describing the class methods
 interface StudentClassInterface {
   workOnHomework(): string;
@@ -55,7 +56,7 @@ interface StudentConstructor {
 }
 
 // Class implementation
-class StudentClass implements StudentClassInterface {
+class StudentClass {
   private firstName: string;
   private lastName: string;
 
@@ -64,16 +65,16 @@ class StudentClass implements StudentClassInterface {
     this.lastName = lastName;
   }
 
-    workOnHomework(): string{
-      return "Currently working";
-    }
-    displayName(): string {
-      return this.firstName;
-    }
+  workOnHomework(): string {
+    return "Currently working";
   }
+
+  displayName(): string {
+    return this.firstName;
+  }
+}
 
 // Example usage
 const student: StudentClassInterface = new StudentClass("John", "Doe");
-console.log(student.displayName());
-console.log(student.workOnHomework())
-
+console.log(student.displayName());    // John
+console.log(student.workOnHomework()); // Currently working
