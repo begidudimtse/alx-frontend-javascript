@@ -33,10 +33,12 @@ console.log(director1);
 
 // Interface describing the function signature
 interface PrintTeacherFunction {
-(firstName: string, lastName: string): string;
+  (firstName: string, lastName: string): string;
 }
 
-// Implementation using the interface
 const printTeacher: PrintTeacherFunction = (firstName, lastName) => {
-  return `${firstName.charAt(0)}.${lastName}`;
-}
+  return `${firstName.charAt(0)}. ${lastName}`;
+};
+
+console.log(printTeacher("John", "Doe")); // Output: J. Doe
+
