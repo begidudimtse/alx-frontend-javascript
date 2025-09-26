@@ -22,7 +22,7 @@ interface Director extends Teacher {
   numberOfReports: number; 
 }
 
-const director1: Directors = {
+const director1: Director = {
   firstName: 'John',
   lastName: 'Doe',
   location: 'London',
@@ -30,3 +30,13 @@ const director1: Directors = {
   numberOfReports: 17,
 };
 console.log(director1);
+
+// Interface describing the function signature
+interface PrintTeacherFunction {
+(firstName: string, lastName: string): string;
+}
+
+// Implementation using the interface
+const printTeacher: PrintTeacherFunction = (firstName, lastName) => {
+  return `${firstName.charAt(0)}.${lastName}`;
+}
