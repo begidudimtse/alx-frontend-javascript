@@ -1,5 +1,5 @@
 // Define the Student interface
-interface Employee {
+interface Teacher {
   readonly firstName: string;        // only set when initializing
   readonly lastName: string;         // only set when initializing
   fullTimeEmployee: boolean;         // always defined
@@ -9,7 +9,7 @@ interface Employee {
 }
 
 // Create two students
-const teacher1: Employee = {
+const teacher1: Teacher = {
   firstName: 'John',
   fullTimeEmployee: false,
   lastName: 'Doe',
