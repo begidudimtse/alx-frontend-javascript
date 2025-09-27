@@ -12,11 +12,8 @@ const row: RowElement = {
 // Insert row
 const newRowID: RowID = CRUD.insertRow(row);
 
-// Update row
-const updatedRow: RowElement = {
-  ...row,
-  age: 23,
-};
+// Update row using spread operator
+const updatedRow: RowElement = { ...row, age: 23 };
 CRUD.updateRow(newRowID, updatedRow);
 
 // Delete row
