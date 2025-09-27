@@ -44,3 +44,19 @@ function createEmployee(salary: number | string): Director | Teacher {
   
 }
 
+// String literal type
+type Subjects = "Math" | "History";
+
+// Function teachClass
+export function teachClass(todayClass: Subjects): string {
+  if (todayClass === "Math") {
+    return "Teaching Math";
+  }
+  return "Teaching History";
+}
+
+// Example test calls
+console.log(teachClass("Math"));    // Teaching Math
+console.log(teachClass("History")); // Teaching History
+
+
